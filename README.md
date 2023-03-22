@@ -4,7 +4,7 @@ for https://github.com/GoogleCloudPlatform/cloud-sql-jdbc-socket-factory/issues/
 make build
 ```
 
---> push cloudsql-pg-iam-fail-repro-repro:latest to artifact reg
+--> push cloudsql-pg-iam-fail-repro:latest to artifact reg
 
 
 cloud run spec:
@@ -22,7 +22,7 @@ spec:
       timeoutSeconds: 10
       serviceAccountName: ..........
       containers:
-      - image: us-docker.pkg.dev/....../cloudsql-pg-iam-fail-repro-repro:latest
+      - image: us-docker.pkg.dev/....../cloudsql-pg-iam-fail-repro:latest
         ports:
         - name: http1
           containerPort: 8080
