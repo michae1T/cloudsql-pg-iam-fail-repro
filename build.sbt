@@ -25,6 +25,14 @@ lazy val service = project
     name := "michaelt-repro",
     commonSettings,
     libraryDependencies ++= Seq(
+      "com.google.cloud" % "google-cloud-core" % Versions.GoogleCloudCore,
+      "io.janstenpickle" %% "trace4cats-core" % Versions.Trace4CatsCore,
+      "io.janstenpickle" %% "trace4cats-kernel" % Versions.Trace4CatsCore,
+      "io.janstenpickle" %% "trace4cats-jaeger-thrift-exporter" % Versions.Trace4CatsComponents,
+      "io.janstenpickle" %% "trace4cats-opentelemetry-otlp-grpc-exporter" % Versions.Trace4CatsComponents,
+      "io.janstenpickle" %% "trace4cats-stackdriver-grpc-exporter" % Versions.Trace4CatsComponents,
+      "org.typelevel" %% "log4cats-slf4j" % Versions.Log4Cats,
+
       "org.typelevel" %% "cats-core" % Versions.CatsCore,
       "com.github.pureconfig" %% "pureconfig-core" % Versions.Pureconfig,
       "com.softwaremill.sttp.model" %% "core" % Versions.SttpModelCore,
